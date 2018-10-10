@@ -5,10 +5,6 @@ void start1(int[][] ar){
 ar[col1/2][0]=1;  
 }
 
-int[] list={1,1,0,0,0,1,0,1};
-int[] list2={1,0,1,1,0,1,0,1};
-int[] list1={1,1,0,1,0,1,0,1};
-
 int rule(int x, int y, int z){
  if(x==1&&y==1&&z==1){return list[0];}
  else if(x==1&&y==1&&z==0){return list[1];}
@@ -28,7 +24,7 @@ ar[i][j]=rule(ar[i-1][j-1],ar[i][j-1],ar[i+1][j-1]);
  }}  
 }
 
- void sir(int[][] ar){
+void sir(int[][] ar){
 start1(ar);refig(ar);
    rectMode(CENTER);
      for(int j=0;j<row1;j++){
@@ -38,23 +34,9 @@ start1(ar);refig(ar);
  }}     
 }
 
-
-
 int[] conToList(String str){
   for(int j=0;j<8;j++){
- list[j]=str.charAt(j);   
+ list[j]=str.charAt(j)-48;   
   }
  return list; 
-}
-
-
-
-int[][] alist=new int[8][10];
-int[][] plist={{1,0,0,1,0,0,1,1},{0,1,0,1,0,1,0,1}};
-
-
-void rev(int[][] ar1,int[][] ar2){
-  for(int j=0;j<8;j++){
-    ar1[j][num]=ar2[num][j];
-  }
 }
