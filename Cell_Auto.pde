@@ -4,7 +4,7 @@ int numlist=0;int num=0;
 int[] list;
 
 void setup(){
-size(1000,700);
+size(1200,800);
 demo1=new int[col1][row1];
 list=new int[8];
 
